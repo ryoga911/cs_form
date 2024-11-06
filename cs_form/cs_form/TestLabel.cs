@@ -30,6 +30,12 @@ namespace cs_form
                 MessageBox.Show(Text);
             }
 
+        public void TextUpdate(string str)
+        {
+            Text = str;
+        }
+
+
 
         }
     }

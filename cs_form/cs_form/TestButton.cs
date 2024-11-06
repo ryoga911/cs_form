@@ -9,8 +9,12 @@ namespace cs_form
 
     internal class TestButton : Button
     {
-        public TestButton(int id, int x, int y, int width, int height)
+        Form1  _form1;
+
+        public TestButton(Form1 form1,  int id, int x, int y, int width, int height)
         {
+            _form1 = form1;
+
             Click += Onclick;
             //ボタン内に文字を表示させる
             Text = id.ToString();
@@ -24,7 +28,7 @@ namespace cs_form
         }
         public void Onclick(object sender, EventArgs s)
         {
-            MessageBox.Show(Text);
+            _form1.LabelTextUpdate(Text);
         }
 
 
