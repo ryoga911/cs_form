@@ -5,20 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace cs_form
 {
-
-    internal class TestButton : Button
+    internal class TestTextBox:TextBox
     {
-        Form1  _form1;
 
-        public TestButton(Form1 form1,  int id, int x, int y, int width, int height)
+
+
+        public TestTextBox(string str, int x, int y, int width, int height)
         {
-            _form1 = form1;
 
-            Click += Onclick;
             //ボタン内に文字を表示させる
-            Text = id.ToString();
+            Text = str;
 
 
             //ボタンの生成場所を指定
@@ -29,9 +28,15 @@ namespace cs_form
         }
         public void Onclick(object sender, EventArgs s)
         {
-            _form1.LabelTextUpdate(Text);
+            MessageBox.Show(Text);
         }
 
-
+        public void TextUpdate(string str)
+        {
+            Text = str;
+        }
     }
+
 }
+
+

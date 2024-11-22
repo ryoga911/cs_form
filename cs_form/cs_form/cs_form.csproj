@@ -54,7 +54,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="project.cs">
       <SubType>Form</SubType>
@@ -63,13 +62,18 @@
       <DependentUpon>project.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Size.cs" />
     <Compile Include="TestButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TestLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TestTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
